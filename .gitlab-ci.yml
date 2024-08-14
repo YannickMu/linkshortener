@@ -7,7 +7,7 @@ pages:
   script:
     - npm install
     - npx nuxi generate
-    - cp -r ./dist ./public
+    - cp -r ./.output/public .
   artifacts:
     paths:
       # The folder that contains the files to be exposed at the Page URL
