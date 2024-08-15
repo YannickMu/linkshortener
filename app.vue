@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full justify-center items-center flex m-2 mt-16 flex-col">
+  <div class="w-full justify-center items-center flex m-2 mt-20 flex-col">
     <NuxtPage />
   </div>
   <div class="btm-nav top-0 bottom-auto">
@@ -65,6 +65,15 @@
             class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
             aria-label="Aqua"
             value="aqua"
+          />
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="theme-dropdown"
+            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+            aria-label="Cyberpunk"
+            value="cyberpunk"
           />
         </li>
       </ul>
