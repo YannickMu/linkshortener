@@ -27,53 +27,17 @@
             type="radio"
             name="theme-dropdown"
             class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-            aria-label="Default"
+            aria-label="default"
             value="default"
           />
         </li>
-        <li>
+        <li v-for="theme of themes">
           <input
             type="radio"
             name="theme-dropdown"
             class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-            aria-label="Light"
-            value="light"
-          />
-        </li>
-        <li>
-          <input
-            type="radio"
-            name="theme-dropdown"
-            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-            aria-label="Dark"
-            value="dark"
-          />
-        </li>
-        <li>
-          <input
-            type="radio"
-            name="theme-dropdown"
-            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-            aria-label="Black"
-            value="black"
-          />
-        </li>
-        <li>
-          <input
-            type="radio"
-            name="theme-dropdown"
-            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-            aria-label="Aqua"
-            value="aqua"
-          />
-        </li>
-        <li>
-          <input
-            type="radio"
-            name="theme-dropdown"
-            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-            aria-label="Cyberpunk"
-            value="cyberpunk"
+            :aria-label="theme"
+            :value="theme"
           />
         </li>
       </ul>
