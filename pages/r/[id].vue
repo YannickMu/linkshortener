@@ -4,6 +4,7 @@
     goes to:
     {{ link }}
   </p>
+  <span class="loading loading-infinity loading-lg text-accent"></span>
 </template>
 <script setup lang="ts">
 const route = useRoute();
