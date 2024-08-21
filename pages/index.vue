@@ -1,5 +1,5 @@
 <template>
-    <div>
+  <div>
     <div role="alert" class="alert alert-error">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -14,7 +14,22 @@
           d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
         />
       </svg>
-      <span>Error! Task failed successfully.</span>
+      <span>Error! Task failed successfully {{ count }} times.</span>
     </div>
+    <input
+      type="text"
+      ref="input"
+      placeholder="Test"
+      class="input input-bordered w-full max-w-xs"
+    />
+    <button @click="console.log(input.value)" class="btn btn-sm btn-primary">
+      Test
+    </button>
   </div>
 </template>
+
+<script setup lang="ts">
+definePageMeta({ name: "Home" });
+const input = ref("");
+</script>
+
