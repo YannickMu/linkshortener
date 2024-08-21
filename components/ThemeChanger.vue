@@ -1,6 +1,6 @@
 <template>
   <div class="dropdown mb-2">
-    <div tabindex="0" role="button" class="btn mt-3 ml-5 mb-2">
+    <div tabindex="0" role="button" class="btn mt-3 mr-3 mb-2">
       Theme
       <svg
         width="12px"
@@ -16,7 +16,7 @@
     </div>
     <ul
       tabindex="0"
-      class="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl"
+      class="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl right-0"
     >
       <li>
         <input
