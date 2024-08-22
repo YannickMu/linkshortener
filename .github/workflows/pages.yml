@@ -35,6 +35,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+      - name: create .env
+        run:
+          echo -e "GITHUB_CLIENT_ID=$CLIENT_ID\nGITHUB_CLIENT_SECRET=$CLIENT_SECRET\n\n" > ./.env
+          echo -e "GOOGLE_CLIENT_ID=$GOOGLE_CLIENT_ID\nGOOGLE_CLIENT_SECRET=$GOOGLE_CLIENT_SECRET" >> ./.env
+
       - name: Install dependencies
         run: npm install
       - name: Static HTML export with Nuxt

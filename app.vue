@@ -43,6 +43,40 @@
       </div>
       <div class="navbar-end">
         <ThemeChanger />
+        <div class="dropdown dropdown-end">
+          <div
+            tabindex="0"
+            role="button"
+            class="btn btn-ghost btn-circle avatar"
+          >
+            <div class="w-10 rounded-full">
+              <img alt="Tailwind CSS Navbar component" src="/profile.svg" />
+            </div>
+          </div>
+          <ul
+            v-if="status === 'authenticated'"
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+          >
+            <li>
+              <a class="justify-between">
+                Profile
+                <span class="badge">New</span>
+              </a>
+            </li>
+            <li><a>Settings</a></li>
+            <li><a @click="signOut()">Logout</a></li>
+          </ul>
+          <ul
+            v-if="status === 'unauthenticated'"
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+          >
+            <li>
+              <a href="/api/auth/signin">Login</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <NuxtPage />
@@ -52,4 +86,5 @@
 const router = useRouter();
 const routerroutes = router.getRoutes();
 const routes = routerroutes.filter(({ name }) => !name.includes("ignore"));
+const { status, data, signOut } = useAuth();
 </script>

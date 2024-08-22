@@ -10,6 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/auth-next": "5.0.0-1667386184.dfbbb54",
+    "@nuxtjs/axios": "^5.13.6",
+    "@sidebase/nuxt-auth": "^0.8.2",
     "nuxt": "^3.12.4",
     "vue": "latest"
   },
