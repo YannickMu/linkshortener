@@ -41,7 +41,8 @@ jobs:
           echo -e "GOOGLE_CLIENT_ID=$GOOGLE_CLIENT_ID\nGOOGLE_CLIENT_SECRET=$GOOGLE_CLIENT_SECRET" >> ./.env
 
       - name: Install dependencies
-        run: npm install
+        run: rm -rfv ./node_modules
+          npm install --verbose
       - name: Static HTML export with Nuxt
         run: npx nuxi generate
       - name: Upload artifact
