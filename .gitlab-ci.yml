@@ -8,7 +8,7 @@ pages:
     - echo -e "GITHUB_CLIENT_ID=$GITHUB_CLIENT_ID\nGITHUB_CLIENT_SECRET=$GITHUB_CLIENT_SECRET\n\n" >> ./.env
     - echo -e "GOOGLE_CLIENT_ID=$GOOGLE_CLIENT_ID\nGOOGLE_CLIENT_SECRET=$GOOGLE_CLIENT_SECRET" >> ./.env
     - npm cache clear --force
-    - rm -frv ./node_modules
+    - rm -frv ./node_modules package-lock.json
     - npm install --verbose
     - npx nuxi generate
     - cp -r ./.output/public .
