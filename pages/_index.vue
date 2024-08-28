@@ -18,18 +18,18 @@
     </div>
     <input
       type="text"
-      ref="input"
+      v-model="input"
       placeholder="Test"
       class="input input-bordered w-full max-w-xs"
     />
-    <button @click="console.log(input.value)" class="btn btn-sm btn-primary">
+    <button @click="console.log(input)" class="btn btn-sm btn-primary">
       Test
     </button>
   </div>
 </template>
 
 <script setup lang="ts">
-definePageMeta({ name: "Home" });
+definePageMeta({ name: "Home", path: "/" });
 const { status, data } = useAuth();
 const input = ref("");
 </script>
